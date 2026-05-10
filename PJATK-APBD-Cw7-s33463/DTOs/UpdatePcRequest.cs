@@ -7,6 +7,6 @@ public record UpdatePcRequest(
     string Name,
     float Weight,
     int Warranty,
-    DateTime Date,
+    DateTime CreatedAt,
     int Stock
 );

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PJATK_APBD_Cw7_s33463.Infrastructure;
+using PJATK_APBD_Cw7_s33463.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,13 +14,15 @@ builder.Services.AddDbContext<DatabaseContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
+builder.Services.AddScoped<IPcService, PcService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.UseSwaggerUI(opt => opt.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
+    app.UseSwaggerUI(opt => opt.SwaggerEndpoint("/openapi/v1.json", "My API V1"));
 }
 
 app.UseHttpsRedirection();

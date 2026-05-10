@@ -5,7 +5,7 @@ public record PcDetailsDto(
     string Name,
     float Weight,
     int Warranty,
-    DateTime Date,
+    DateTime CreatedAt,
     int Stock,
-    IEnumerable<ComponentDto> Components
+    IEnumerable<PcComponentsDto> Components
 );
