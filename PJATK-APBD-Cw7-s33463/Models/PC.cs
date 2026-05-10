@@ -20,4 +20,6 @@ public class PC
     public DateTime CreatedAt { get; set; }
     
     public int Stock { get; set; }
+
+    public IEnumerable<PCComponent> PcComponents { get; set; } = [];
 }

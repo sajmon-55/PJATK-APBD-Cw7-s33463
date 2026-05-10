@@ -17,4 +17,6 @@ public class Component
     public int ComponentManufacturersId { get; set; }
     
     public int ComponentTypeId { get; set; }
+
+    public IEnumerable<PCComponent> PcComponents { get; set; } = [];
 }

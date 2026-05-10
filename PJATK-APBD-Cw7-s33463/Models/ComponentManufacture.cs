@@ -18,4 +18,6 @@ public class ComponentManufacture
     
     [Column(TypeName = "date")]
     public DateOnly FoundationDate { get; set; }
+
+    public IEnumerable<Component> Components { get; set; } = [];
 }
