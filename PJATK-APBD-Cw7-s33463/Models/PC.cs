@@ -12,7 +12,6 @@ public class PC
     [MaxLength(50)]
     public string Name { get; set; } = string.Empty;
     
-    [Column(TypeName = "float(5)")]
     public float Weight { get; set; }
     
     public int Warranty { get; set; }

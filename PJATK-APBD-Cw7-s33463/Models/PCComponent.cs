@@ -14,6 +14,9 @@ public class PCComponent
     
     public int Amount { get; set; }
 
+    [ForeignKey(nameof(PCId))]
     public PC Pc { get; set; } = null!;
+    
+    [ForeignKey(nameof(ComponentCode))]
     public Component Component { get; set; } = null!;
 }
